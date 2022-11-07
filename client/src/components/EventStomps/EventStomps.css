@@ -1,0 +1,62 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images
+**************/
+
+.event-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*************
+Buttons / Links
+**************/
+
+/*************
+Typography
+**************/
+
+.event-card-title {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.event-card-location {
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+}
+
+.event-card-date {
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+/*************
+Layout
+**************/
+
+.event-stomps-card {
+  position: relative;
+  border: 2px solid var(--grn);
+  border-radius: 10px;
+}
+
+.event-info-container {
+  background-color: rgba(244, 243, 234, 0.8);
+  border-radius: 0 0 8px 8px;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*************
+Media Queries
+**************/

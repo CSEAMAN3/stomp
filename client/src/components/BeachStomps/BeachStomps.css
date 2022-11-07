@@ -1,0 +1,63 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images
+**************/
+
+.beach-img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  /* margin-bottom: 0.5rem; */
+}
+
+.beach-card-icon {
+  color: var(--grn);
+  margin-right: 1rem;
+}
+
+/*************
+Buttons / Links
+**************/
+
+/*************
+Typography
+**************/
+
+.beach-title {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.seafront-text {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+}
+
+/*************
+Layout
+**************/
+
+.beach-stomps-card {
+  position: relative;
+  border: 2px solid var(--grn);
+  border-radius: 10px;
+}
+
+.beachcard-info-container {
+  background-color: rgba(244, 243, 234, 0.8);
+  border-radius: 0 0 8px 8px;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/*************
+Media Queries
+**************/

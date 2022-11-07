@@ -1,0 +1,172 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images
+**************/
+
+.main-img {
+  object-fit: cover;
+  object-position: center;
+  /* height: 100%; */
+  min-height: 240px;
+  max-height: 60vh;
+  border-radius: 8px;
+}
+
+/*************
+Buttons / Links
+**************/
+
+/*************
+Typography
+**************/
+
+.searchResults-heading {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.sr-content {
+  font-weight: 300;
+}
+
+/*************
+Layout
+**************/
+
+.searchResults-main {
+  width: 100%;
+  margin-bottom: 14rem;
+}
+
+.searchResults-main-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sr-content-container {
+  background-color: var(--wht);
+  width: 80%;
+  padding: 2rem;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+}
+
+.beach-stomps-section {
+  width: 100%;
+  margin: 10rem 0;
+}
+
+.beach-stomps-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.event-stomps-section {
+  width: 100%;
+  margin: 10rem 0;
+}
+
+.event-stomps-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.nature-stomps-section {
+  width: 100%;
+  margin: 10rem 0;
+}
+
+.nature-stomps-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.city-stomps-section {
+  width: 100%;
+  margin: 10rem 0;
+}
+
+.city-stomps-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+/*************
+Media Queries
+**************/
+
+@media (min-width: 800px) {
+  /*************
+General Elements @800px
+**************/
+
+  /*************
+Images @800px
+**************/
+
+  .main-img {
+    object-fit: cover;
+    object-position: center;
+    /* height: 100%; */
+    height: 60vh;
+    border-radius: 8px;
+  }
+
+  /*************
+Buttons / Links @800px
+**************/
+
+  /*************
+Typography @800px
+**************/
+
+  /*************
+Layout @800px
+**************/
+
+  .img-container {
+    width: 60%;
+    margin-left: auto;
+  }
+
+  .sr-content-container {
+    width: 50%;
+    left: 0;
+    transform: translateX(0);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+/*************
+Media Queries
+**************/

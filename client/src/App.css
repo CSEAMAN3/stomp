@@ -1,0 +1,95 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--wht);
+}
+
+:root {
+  /* --wht: #f8f8f8; */
+  /* --blk: #1d1d1d; */
+  /* --yel: #fec204; */
+  /* --lgrn: #70cf83; */
+  /* --dgrn: #3a5942; */
+  --blu: #0a1a2d;
+  --grn: #008382;
+  --org: #ff3300;
+  --yel: #ffa300;
+  --wht: #f4f3ea;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  color: var(--blu);
+}
+
+/*************
+General Elements
+**************/
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/*************
+Images
+**************/
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/*************
+Buttons / Links
+**************/
+
+button {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/*************
+Typography
+**************/
+
+/*************
+Layout
+**************/
+
+/*************
+Media Queries
+**************/

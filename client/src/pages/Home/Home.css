@@ -1,0 +1,177 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images
+**************/
+
+.hero-img {
+  min-height: 400px;
+  height: 60vh;
+  border-radius: 32px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.join-img {
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/*************
+Buttons / Links / input
+**************/
+
+.location-input {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: 0.5px solid var(--blu);
+  border-radius: 2px;
+}
+
+.location-input::placeholder {
+  font-size: 0.75rem;
+}
+
+.search-btn {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--wht);
+  letter-spacing: 0.01rem;
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--grn);
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.search-btn:active {
+  transform: scale(0.96);
+}
+
+.join-lrn-btn {
+  width: 140px;
+}
+
+/*************
+Typography
+**************/
+
+.form-heading {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-info {
+  font-weight: 300;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.join-heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.join-content {
+  margin-bottom: 1rem;
+}
+
+/*************
+Layout
+**************/
+
+.main {
+  width: 100%;
+}
+
+.main-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.form-container {
+  background-color: var(--wht);
+  border-radius: 16px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  min-width: 260px;
+  max-width: 400px;
+  width: 50vw;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -120px;
+}
+
+/*************
+Media Queries @800px
+**************/
+
+@media (min-width: 800px) {
+  /*************
+General Elements @800px
+**************/
+
+  /*************
+Images @800px
+**************/
+
+  .hero-img {
+    width: 80%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  /*************
+Buttons / Links @800px
+**************/
+
+  /*************
+Typography @800px
+**************/
+
+  /*************
+Layout @800px
+**************/
+
+  /* .main-container {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+  } */
+
+  .hero-section {
+    margin-bottom: 0px;
+  }
+
+  .hero-section {
+    padding: 0rem 0 2rem 0;
+  }
+
+  .form-container {
+    position: absolute;
+    right: 0;
+    transform: translateX(0%);
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  /*************
+Media Queries
+**************/
+}

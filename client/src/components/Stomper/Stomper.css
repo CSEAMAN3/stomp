@@ -1,0 +1,115 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images / icons
+**************/
+
+.stomper-icon {
+  margin-right: 1rem;
+  color: var(--grn);
+}
+
+/*************
+Buttons / Links
+**************/
+
+/*************
+Typography
+**************/
+
+.stomper-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.stomper-type-heading {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  /* color: var(--lgrn); */
+}
+
+.stomper-text {
+  font-weight: 300;
+}
+
+/*************
+Layout
+**************/
+
+.stomper-section {
+  width: 100%;
+  /* background-color: pink; */
+  padding-top: 2rem;
+  /* margin-bottom: 2rem; */
+}
+
+.stomper-section-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.stomper-line {
+  border: 0.5px solid var(--grn);
+  margin-bottom: 2rem;
+}
+
+.stomper-collection-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.stomper-container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+/*************
+Media Queries
+**************/
+
+@media (min-width: 800px) {
+  /*************
+General Elements @800px
+**************/
+
+  /*************
+Images @800px
+**************/
+
+  /*************
+Buttons / Links /input @800px
+**************/
+
+  /*************
+Typography @800px
+**************/
+
+  /*************
+Layout @800px
+**************/
+
+  .stomper-section {
+    width: 100%;
+    /* background-color: pink; */
+    padding-top: 0rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .stomper-collection-container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .stomper-container {
+    width: 48%;
+  }
+}
+/*************
+Media Queries
+**************/
