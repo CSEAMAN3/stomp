@@ -6,6 +6,10 @@ General Elements
 Images
 **************/
 
+.logo {
+  width: 100px;
+}
+
 /*************
 Buttons / Links
 **************/
@@ -22,7 +26,7 @@ Typography
 
 .header-list-item {
   margin-left: 1rem;
-  color: var(--blu);
+  color: var(--grn);
   font-weight: 700;
 }
 
@@ -51,7 +55,7 @@ Layout
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid var(--yel);
+  /* border-bottom: 1px solid var(--yel); */
 }
 
 .header-nav {

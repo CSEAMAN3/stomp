@@ -1,46 +1,46 @@
 import React from "react";
 import "./SearchResults.css";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 import norwichMainImg from "../../images/norwich-main.jpg";
 
-import BeachStomps from "../../components/BeachStomps/BeachStomps";
-import { beachdata } from "../../beachdata";
-import EventStomps from "../../components/EventStomps/EventStomps";
-import { eventsdata } from "../../eventsdata";
-import NatureStomps from "../../components/NatureStomps/NatureStomps";
-import { naturedata } from "../../naturedata";
-import CityStomps from "../../components/CityStomps/CityStomps";
-import { citydata } from "../../citydata";
+import StompCards from "../../components/StompCards/StompCards";
+// import { beachdata } from "../../beachdata";
+// import EventStomps from "../../components/EventStomps/EventStomps";
+// import { eventsdata } from "../../eventsdata";
+// import NatureStomps from "../../components/NatureStomps/NatureStomps";
+// import { naturedata } from "../../naturedata";
+// import CityStomps from "../../components/CityStomps/CityStomps";
+// import { citydata } from "../../citydata";
 
 export default function SearchResults() {
-  const { location } = useParams();
+  const { tag } = useParams();
 
-  const beachcards = beachdata.map((card) => {
-    return <BeachStomps key={card.id} {...card} />;
-  });
+  const [stomps, setStomps] = useState([]);
 
-  const eventcards = eventsdata.map((card) => {
-    return <EventStomps key={card.id} {...card} />;
-  });
+  //use effect is when the page loads or the dependencies change
+  useEffect(() => {
+    getStomps();
+  }, []);
 
-  const naturecards = naturedata.map((card) => {
-    return <NatureStomps key={card.id} {...card} />;
-  });
-
-  const citycards = citydata.map((card) => {
-    return <CityStomps key={card.id} {...card} />;
-  });
+  const getStomps = async () => {
+    const API = `http://localhost:8080/stomps/tags/${tag}`;
+    const res = await axios.get(API);
+    console.log(res.data);
+    setStomps(res.data);
+  };
 
   return (
     <>
       <main className="searchResults-main">
         <div className="searchResults-main-container">
           <div className="img-container">
-            <img className="main-img" src={norwichMainImg} alt={location} />
+            <img className="main-img" src={norwichMainImg} alt={tag} />
           </div>
           <div className="sr-content-container">
-            <h1 className="searchResults-heading">{location}</h1>
+            <h1 className="searchResults-heading">{tag}</h1>
             <p className="sr-content">
               Lorem ipsum dolor sit amet consect etur adipisi cing elit. Ducimus vero eveniet sequi aliquid sunt autem quidem
               earum suscip it magnam neque cumque, tempore, quae delectus explica bo officia.
@@ -48,25 +48,37 @@ export default function SearchResults() {
           </div>
         </div>
       </main>
-      <section className="beach-stomps-section">
+      <section className="beach-stomps-section stomp-section">
         <div className="stomp-heading-container">
-          <h2 className="Beach-heading">stomp beaches near {location}</h2>
+          <h2 className="stomp-heading">stomp beaches near {tag}</h2>
         </div>
-        <div className="beach-stomps-container">{beachcards}</div>
+        <div className="beach-stomps-container stomps-container">
+          <StompCards stomps={stomps} type="beach" />
+        </div>
       </section>
-      <section className="event-stomps-section">
+      <section className="event-stomps-section stomp-section">
         <div className="stomp-heading-container">
-          <h2>stomp to events near {location}</h2>
+          <h2 className="stomp-heading">stomp at events near {tag}</h2>
         </div>
-        <div className="event-stomps-container">{eventcards}</div>
+        <div className="event-stomps-container stomps-container">
+          <StompCards stomps={stomps} type="event" />
+        </div>
       </section>
-      <section className="nature-stomps-section">
-        <h2>stomp in nature near {location}</h2>
-        <div className="nature-stomps-container">{naturecards}</div>
+      <section className="nature-stomps-section stomp-section">
+        <div className="stomp-heading-container">
+          <h2 className="stomp-heading">stomp in nature near {tag}</h2>
+        </div>
+        <div className="nature-stomps-container stomps-container">
+          <StompCards stomps={stomps} type="nature" />
+        </div>
       </section>
-      <section className="city-stomps-section">
-        <h2>stomp the city of {location}</h2>
-        <div className="city-stomps-container">{citycards}</div>
+      <section className="city-stomps-section stomp-section">
+        <div className="stomp-heading-container">
+          <h2 className="stomp-heading">stomp the city of {tag}</h2>
+        </div>
+        <div className="city-stomps-container stomps-container">
+          <StompCards stomps={stomps} type="city" />
+        </div>
       </section>
     </>
   );

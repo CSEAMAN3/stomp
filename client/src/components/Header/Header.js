@@ -3,6 +3,7 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 import Burger from "../Burger/Burger";
+import logo from "../../images/stomplogo.svg";
 
 export default function Header() {
   return (
@@ -10,7 +11,8 @@ export default function Header() {
       <div className="header-container">
         <div className="logo-container">
           <Link to="/">
-            <h1 className="header-logo">Stomp</h1>
+            {/* <h1 className="header-logo">Stomp</h1> */}
+            <img className="logo" src={logo} alt="stomp logo" />
           </Link>
         </div>
         <Burger />
@@ -22,7 +24,7 @@ export default function Header() {
             <Link to="/contact">
               <li className="header-list-item">Contact</li>
             </Link>
-            <Link to="/memberslogin">
+            <Link to="/memberprofile">
               <li className="header-list-item">Members Login</li>
             </Link>
           </ul>

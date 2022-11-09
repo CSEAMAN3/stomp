@@ -10,6 +10,9 @@ const stompSchema = new Schema({
   location: String,
   description: String,
   tags: String,
+  type: String,
+  eventDate: String,
+  bookNow: Boolean,
 });
 
 const Stomp = mongoose.model("Stomp", stompSchema);

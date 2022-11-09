@@ -1,6 +1,7 @@
 import React from "react";
 import "./Burger.css";
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom";
 
 export default function Burger() {
   return (
@@ -14,7 +15,8 @@ export default function Burger() {
       <a className="menu-item" href="/">
         Contact
       </a>
-      <a className="menu-item" href="/">
+
+      <a className="menu-item" href="/memberprofile">
         Members Login
       </a>
     </Menu>

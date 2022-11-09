@@ -1,0 +1,94 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images
+**************/
+
+/*************
+Buttons / Links
+**************/
+
+.type-button {
+  width: 120px;
+  padding: 1rem;
+  background-color: var(--yel);
+  border: none;
+  border-radius: 4px;
+  color: var(--wht);
+}
+
+.type-button:active {
+  transform: scale(0.98);
+}
+
+.stomp-description-box {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  height: auto;
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  resize: none;
+}
+
+/*************
+Typography
+**************/
+
+.welcome-member-heading {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--yel);
+  margin-bottom: 1rem;
+}
+
+.member-section-heading {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--grn);
+  margin-bottom: 1rem;
+}
+
+.select-type-text {
+  margin-bottom: 1rem;
+}
+
+/*************
+Layout
+**************/
+
+.member-profile-main {
+  width: 100%;
+}
+
+.member-profile-container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.member-stomps-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-bottom: 1rem;
+}
+
+.type-button-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+
+/*************
+Media Queries
+**************/
