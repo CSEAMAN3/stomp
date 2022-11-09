@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import Burger from "../Burger/Burger";
 import logo from "../../images/stomplogo.svg";
+import LoginButton from "../LoginButton";
 
 export default function Header() {
   return (
@@ -24,9 +25,7 @@ export default function Header() {
             <Link to="/contact">
               <li className="header-list-item">Contact</li>
             </Link>
-            <Link to="/memberprofile">
-              <li className="header-list-item">Members Login</li>
-            </Link>
+            <LoginButton />
           </ul>
         </nav>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./MemberProfile.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import axios from "axios";
 
@@ -12,14 +13,42 @@ import EventForm from "../../components/Forms/EventForm";
 import NatureForm from "../../components/Forms/NatureForm";
 
 export default function MemberProfile() {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+  console.log(user);
+
   const [stomps, setStomps] = useState([]);
   const [stompType, setstompType] = useState("");
 
   const [formType, setFormType] = useState("");
+  const [createForm, setCreateForm] = useState({
+    user: "",
+    cardImg: "",
+    title: "",
+    seafront: 0,
+    parking: false,
+    restaurant: false,
+    bars: false,
+    location: "",
+    description: "",
+    tags: "",
+    type: "",
+    eventDate: "",
+    bookNow: false,
+  });
 
   useEffect(() => {
     getStomps();
   }, []);
+
+  const handleChangeCreate = (event) => {
+    setCreateForm({ ...createForm, [event.target.name]: event.target.value });
+    console.log(createForm);
+    console.log(event.target);
+  };
+
+  const handleCheck = (event) => {
+    setCreateForm({ ...createForm, [event.target.name]: !createForm[event.target.name] });
+  };
 
   const getStomps = async () => {
     const API = `http://localhost:8080/stomps`;
@@ -30,6 +59,30 @@ export default function MemberProfile() {
 
   const handleFormType = (type) => {
     setFormType(type);
+    setCreateForm({ ...createForm, type });
+  };
+
+  // create a new stomp
+  const createNewStomp = async (event) => {
+    event.preventDefault();
+    const API = `http://localhost:8080/stomps`;
+    const res = await axios.post(API, createForm);
+    setCreateForm({
+      user: "",
+      title: "",
+      cardImg: "",
+      location: "",
+      type: "",
+      description: "",
+      parking: false,
+      restaurant: false,
+      bars: false,
+      tags: "",
+      seafront: 0,
+      eventDate: "",
+      bookNow: false,
+    });
+    setStomps([...stomps, res.data]);
   };
 
   // const beachType = (event) => {
@@ -62,7 +115,7 @@ export default function MemberProfile() {
         <h1 className="welcome-member-heading">welcome amazing member</h1>
         <h2 className="member-section-heading">your stomps</h2>
         <div className="member-stomps-container">
-          <StompCards stomps={stomps} type="beach" />
+          <StompCards stomps={stomps} filterAttr="user" filterValue={user?.email} />
         </div>
         <h2 className="member-section-heading">create new stomp</h2>
         <p className="select-type-text">Select which type of stomp would you like to create.</p>
@@ -80,10 +133,38 @@ export default function MemberProfile() {
             Nature
           </button>
         </div>
-        {formType === "beach" && <BeachForm />}
-        {formType === "city" && <CityForm />}
-        {formType === "event" && <EventForm />}
-        {formType === "nature" && <NatureForm />}
+        {formType === "beach" && (
+          <BeachForm
+            handleChangeCreate={handleChangeCreate}
+            handleCheck={handleCheck}
+            createForm={createForm}
+            createNewStomp={createNewStomp}
+          />
+        )}
+        {formType === "city" && (
+          <CityForm
+            handleChangeCreate={handleChangeCreate}
+            createForm={createForm}
+            createNewStomp={createNewStomp}
+            handleCheck={handleCheck}
+          />
+        )}
+        {formType === "event" && (
+          <EventForm
+            handleChangeCreate={handleChangeCreate}
+            createForm={createForm}
+            createNewStomp={createNewStomp}
+            handleCheck={handleCheck}
+          />
+        )}
+        {formType === "nature" && (
+          <NatureForm
+            handleChangeCreate={handleChangeCreate}
+            createForm={createForm}
+            createNewStomp={createNewStomp}
+            handleCheck={handleCheck}
+          />
+        )}
       </div>
     </main>
   );

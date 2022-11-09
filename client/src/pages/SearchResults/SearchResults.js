@@ -53,7 +53,7 @@ export default function SearchResults() {
           <h2 className="stomp-heading">stomp beaches near {tag}</h2>
         </div>
         <div className="beach-stomps-container stomps-container">
-          <StompCards stomps={stomps} type="beach" />
+          <StompCards stomps={stomps} filterAttr="type" filterValue="beach" />
         </div>
       </section>
       <section className="event-stomps-section stomp-section">
@@ -61,7 +61,7 @@ export default function SearchResults() {
           <h2 className="stomp-heading">stomp at events near {tag}</h2>
         </div>
         <div className="event-stomps-container stomps-container">
-          <StompCards stomps={stomps} type="event" />
+          <StompCards stomps={stomps} filterAttr="type" filterValue="event" />
         </div>
       </section>
       <section className="nature-stomps-section stomp-section">
@@ -69,7 +69,7 @@ export default function SearchResults() {
           <h2 className="stomp-heading">stomp in nature near {tag}</h2>
         </div>
         <div className="nature-stomps-container stomps-container">
-          <StompCards stomps={stomps} type="nature" />
+          <StompCards stomps={stomps} filterAttr="type" filterValue="nature" />
         </div>
       </section>
       <section className="city-stomps-section stomp-section">
@@ -77,7 +77,7 @@ export default function SearchResults() {
           <h2 className="stomp-heading">stomp the city of {tag}</h2>
         </div>
         <div className="city-stomps-container stomps-container">
-          <StompCards stomps={stomps} type="city" />
+          <StompCards stomps={stomps} filterAttr="type" filterValue="city" />
         </div>
       </section>
     </>

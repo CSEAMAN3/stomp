@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const stompSchema = new Schema({
+  user: String,
   cardImg: String,
   title: String,
   seafront: Number,

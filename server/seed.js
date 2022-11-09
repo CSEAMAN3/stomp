@@ -5,6 +5,7 @@ const Stomp = require("./models/stomp");
 
 async function seed() {
   await Stomp.create({
+    user: "christopherseaman1983@gmail.com",
     cardImg:
       "https://images.ctfassets.net/ob1psfsvxnrx/4eUaUN4XyJaUctMKjPZV6v/b2b491779737f17b7adf64e96a29392c/rf_norfolk_cromerbeach_01_2021_xl.jpg",
     title: "cromer",
@@ -21,6 +22,7 @@ async function seed() {
     bookNow: false,
   });
   await Stomp.create({
+    user: "christopherseaman1983@gmail.com",
     cardImg: "https://www.holkham.co.uk/wp-content/uploads/2022/07/2018-Aug-c.-Georgia-DawsonIMG_0549-scaled.jpg",
     title: "holkham",
     seafront: 15,

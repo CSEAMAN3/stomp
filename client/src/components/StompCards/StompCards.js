@@ -8,12 +8,12 @@ import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { faWineGlass } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-export default function StompCards({ stomps, type }) {
+export default function StompCards({ stomps, filterAttr, filterValue }) {
   return (
     <>
       {stomps
         .filter((stomp) => {
-          return stomp.type === type;
+          return stomp[filterAttr] === filterValue;
         })
         .map((card, idx) => {
           const { _id, cardImg, title, seafront, parking, restaurant, bars, location } = card;
