@@ -1,0 +1,37 @@
+/*************
+General Elements
+**************/
+
+/*************
+Images
+**************/
+
+/*************
+Buttons / Links
+**************/
+
+.home-link {
+  display: block;
+  color: var(--blu);
+}
+
+/*************
+Typography
+**************/
+
+/*************
+Layout
+**************/
+
+.stomp-details-main {
+  width: 100%;
+}
+
+.stomp-details-main-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/*************
+Media Queries
+**************/

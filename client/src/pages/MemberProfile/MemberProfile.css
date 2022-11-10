@@ -13,7 +13,7 @@ Buttons / Links
 .type-button {
   width: 120px;
   padding: 1rem;
-  background-color: var(--yel);
+  background-color: var(--grn);
   border: none;
   border-radius: 4px;
   color: var(--wht);
@@ -35,6 +35,10 @@ Buttons / Links
   resize: none;
 }
 
+.active {
+  background-color: var(--yel);
+}
+
 /*************
 Typography
 **************/
@@ -43,7 +47,7 @@ Typography
   text-transform: capitalize;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--yel);
+  color: var(--blu);
   margin-bottom: 1rem;
 }
 
@@ -51,11 +55,11 @@ Typography
   text-transform: capitalize;
   font-weight: 700;
   color: var(--grn);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .select-type-text {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 /*************
@@ -64,6 +68,7 @@ Layout
 
 .member-profile-main {
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .member-profile-container {
@@ -77,7 +82,7 @@ Layout
   gap: 20px;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .type-button-container {
@@ -86,7 +91,7 @@ Layout
   flex-wrap: wrap;
   gap: 20px;
   max-width: 600px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 /*************
