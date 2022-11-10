@@ -19,12 +19,12 @@ const PORT = process.env.PORT || 8080;
 
 mongoose.connect(process.env.DATABASE_URL);
 
-app.get("/", (request, response) => {
+app.get("/.netlify/functions/api", (request, response) => {
   response.json("Yo Mama");
 });
 
 //retrieve all stomps
-app.get("/stomps", async (request, response) => {
+app.get("/.netlify/functions/api/stomps", async (request, response) => {
   try {
     const allStomps = await Stomp.find();
     response.status(200).json(allStomps);
@@ -35,7 +35,7 @@ app.get("/stomps", async (request, response) => {
 });
 
 //retrieve a specific stomp
-app.get("/stomps/:id", async (request, response) => {
+app.get("/.netlify/functions/api/stomps/:id", async (request, response) => {
   try {
     const theStomp = await Stomp.findOne({ _id: request.params.id });
     response.status(200).json(theStomp);
@@ -46,7 +46,7 @@ app.get("/stomps/:id", async (request, response) => {
 });
 
 //retrieve a specific stomp by tag
-app.get("/stomps/tags/:tag", async (request, response) => {
+app.get("/.netlify/functions/api/stomps/tags/:tag", async (request, response) => {
   try {
     const theStomp = await Stomp.find({ tags: { $regex: request.params.tag, $options: "i" } });
     response.status(200).json(theStomp);
@@ -63,7 +63,7 @@ app.get("/stomps/tags/:tag", async (request, response) => {
 );
  */
 //add a new stomp
-app.post("/stomps", async (request, response) => {
+app.post("/.netlify/functions/api/stomps", async (request, response) => {
   try {
     const newStomp = await Stomp.create(request.body);
     response.status(200).json(newStomp);
@@ -74,7 +74,7 @@ app.post("/stomps", async (request, response) => {
 });
 
 //edit a stomp
-app.put("/stomps/:id", async (request, response) => {
+app.put("/.netlify/functions/api/stomps/:id", async (request, response) => {
   try {
     const stompToUpdate = request.params.id;
     const updatedStomp = await Stomp.updateOne({ _id: stompToUpdate }, request.body);
@@ -86,7 +86,7 @@ app.put("/stomps/:id", async (request, response) => {
 });
 
 //delete a stomp
-app.delete("/stomps/:id", async (request, response) => {
+app.delete("/.netlify/functions/api/stomps/:id", async (request, response) => {
   const stompToDelete = request.params.id;
   const deletedStomp = await Stomp.deleteOne({ _id: stompToDelete });
   response.status(200).json(deletedStomp);
