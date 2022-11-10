@@ -2,6 +2,7 @@
 const express = require("express");
 const cors = require("cors");
 const bp = require("body-parser");
+const serverless = require("serverless-http");
 const axios = require("axios");
 const mongoose = require("mongoose");
 
@@ -36,7 +37,7 @@ app.get("/stomps", async (request, response) => {
 //retrieve a specific stomp
 app.get("/stomps/:id", async (request, response) => {
   try {
-    const theStomp = await Stomp.find({ _id: request.params.id });
+    const theStomp = await Stomp.findOne({ _id: request.params.id });
     response.status(200).json(theStomp);
   } catch (error) {
     console.log("error");
@@ -91,4 +92,15 @@ app.delete("/stomps/:id", async (request, response) => {
   response.status(200).json(deletedStomp);
 });
 
-app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));
+// app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));
+
+//new Netlify way to start the server
+const handler = serverless(app);
+
+//we use this so the handler can use async (that mongoose uses)
+module.exports.handler = async (event, context) => {
+  //you can do any code here
+  const result = await handler(event, context);
+  //and here
+  return result;
+};
