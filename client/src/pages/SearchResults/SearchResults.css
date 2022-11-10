@@ -31,7 +31,7 @@ Typography
 }
 
 .sr-content {
-  display: none;
+  display: block;
   font-weight: 300;
 }
 
@@ -48,26 +48,32 @@ Layout
 
 .searchResults-main {
   width: 100%;
-  margin-bottom: 14rem;
+  margin-bottom: 3rem;
 }
 
 .searchResults-main-container {
   width: 90%;
   max-width: 1024px;
   margin: 0 auto;
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sr-content-container {
   background-color: var(--wht);
   width: 80%;
+  /* height: 190px; */
   padding: 1.5rem;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
-  position: absolute;
+  margin-top: -40px;
+  /* position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 88%;
+  overflow: scroll; */
 }
 
 .beach-stomps-section {
@@ -87,7 +93,7 @@ Layout
 
 .stomp-section {
   width: 100%;
-  margin: 10rem 0;
+  margin: 0 0 3rem 0;
 }
 
 .stomps-container {
@@ -104,7 +110,7 @@ Layout
   width: 90%;
   max-width: 1024px;
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* .nature-stomps-section {
@@ -175,12 +181,30 @@ Layout @800px
     margin-left: auto;
   }
 
+  .searchResults-main-container {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+
   .sr-content-container {
+    margin-top: 0px;
+    position: absolute;
+    transform: translateX(-50%);
     width: 50%;
+    min-height: 70%;
     left: 0;
     transform: translateX(0);
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
   }
 }
 /*************

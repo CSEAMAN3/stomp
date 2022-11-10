@@ -25,10 +25,14 @@ Typography
 }
 
 .header-list-item {
+  color: var(--wht);
+}
+
+/* .header-list-item {
   margin-left: 1rem;
   color: var(--grn);
   font-weight: 700;
-}
+} */
 
 .header-list-item:hover {
   color: var(--yel);
@@ -86,6 +90,12 @@ Buttons / Links @800px
   /*************
 Typography @800px
 **************/
+
+  .header-list-item {
+    margin-left: 1rem;
+    color: var(--grn);
+    font-weight: 700;
+  }
 
   /*************
 Layout @800px

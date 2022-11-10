@@ -1,0 +1,14 @@
+a {
+  font-weight: 700;
+}
+
+.memberLogin {
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+@media (min-width: 800px) {
+  .memberLogin {
+    padding: 0;
+  }
+}

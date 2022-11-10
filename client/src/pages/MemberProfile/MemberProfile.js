@@ -14,7 +14,6 @@ import NatureForm from "../../components/Forms/NatureForm";
 
 export default function MemberProfile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user);
 
   const [stomps, setStomps] = useState([]);
   const [stompType, setstompType] = useState("");
@@ -42,8 +41,6 @@ export default function MemberProfile() {
 
   const handleChangeCreate = (event) => {
     setCreateForm({ ...createForm, [event.target.name]: event.target.value });
-    console.log(createForm);
-    console.log(event.target);
   };
 
   const handleCheck = (event) => {
@@ -66,7 +63,7 @@ export default function MemberProfile() {
   const createNewStomp = async (event) => {
     event.preventDefault();
     const API = `http://localhost:8080/stomps`;
-    const res = await axios.post(API, createForm);
+    const res = await axios.post(API, { ...createForm, user: user.email });
     setCreateForm({
       user: "",
       title: "",
@@ -82,32 +79,9 @@ export default function MemberProfile() {
       eventDate: "",
       bookNow: false,
     });
+    setFormType("");
     setStomps([...stomps, res.data]);
   };
-
-  // const beachType = (event) => {
-  //   event.preventDefault();
-  //   setstompType("beach");
-  //   console.log("beach");
-  // };
-
-  // const cityType = (event) => {
-  //   event.preventDefault();
-  //   setstompType("city");
-  //   console.log("city");
-  // };
-
-  // const natureType = (event) => {
-  //   event.preventDefault();
-  //   setstompType("nature");
-  //   console.log("nature");
-  // };
-
-  // const eventType = (event) => {
-  //   event.preventDefault();
-  //   setstompType("event");
-  //   console.log("event");
-  // };
 
   return (
     <main className="member-profile-main">
@@ -123,13 +97,16 @@ export default function MemberProfile() {
           <button className={`type-button ${formType === "beach" ? "active" : ""}`} onClick={() => handleFormType("beach")}>
             Beach
           </button>
-          <button className="type-button" onClick={() => handleFormType("city")}>
+          <button className={`type-button ${formType === "city" ? "active" : ""}`} onClick={() => handleFormType("city")}>
             City
           </button>
-          <button className="type-button" onClick={() => handleFormType("event")}>
+          <button className={`type-button ${formType === "event" ? "active" : ""}`} onClick={() => handleFormType("event")}>
             Event
           </button>
-          <button className="type-button" onClick={() => handleFormType("nature")}>
+          <button
+            className={`type-button ${formType === "nature" ? "active" : ""}`}
+            onClick={() => handleFormType("nature")}
+          >
             Nature
           </button>
         </div>

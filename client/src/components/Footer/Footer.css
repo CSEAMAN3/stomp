@@ -118,6 +118,10 @@ Typography
 Layout
 **************/
 
+  .footer {
+    margin-top: 2rem;
+  }
+
   .footer-section {
     width: 22%;
     justify-content: space-between;

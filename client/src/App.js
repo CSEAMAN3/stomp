@@ -9,6 +9,7 @@ import StompData from "./pages/StompData/StompData";
 import SearchResults from "./pages/SearchResults/SearchResults";
 import MemberProfile from "./pages/MemberProfile/MemberProfile";
 import { Auth0Provider } from "@auth0/auth0-react";
+import StompDetails from "./pages/StompDetails/StompDetails";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/stompdata" element={<StompData />} />
             <Route path="/search/:tag" element={<SearchResults />} />
             <Route path="memberprofile" element={<MemberProfile />} />
+            <Route path="/stompdetails/:id" element={<StompDetails />} />
           </Routes>
           <Footer />
         </div>
