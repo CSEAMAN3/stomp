@@ -11,6 +11,7 @@ import BeachForm from "../../components/Forms/BeachForm";
 import CityForm from "../../components/Forms/CityForm";
 import EventForm from "../../components/Forms/EventForm";
 import NatureForm from "../../components/Forms/NatureForm";
+import { API_URL } from "../../api";
 
 export default function MemberProfile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -48,7 +49,7 @@ export default function MemberProfile() {
   };
 
   const getStomps = async () => {
-    const API = `http://localhost:8080/stomps`;
+    const API = `${API_URL}/stomps`;
     const res = await axios.get(API);
     console.log(res.data);
     setStomps(res.data);
@@ -62,7 +63,7 @@ export default function MemberProfile() {
   // create a new stomp
   const createNewStomp = async (event) => {
     event.preventDefault();
-    const API = `http://localhost:8080/stomps`;
+    const API = `${API_URL}/stomps`;
     const res = await axios.post(API, { ...createForm, user: user.email });
     setCreateForm({
       user: "",

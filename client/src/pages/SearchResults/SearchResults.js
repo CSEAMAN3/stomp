@@ -3,10 +3,10 @@ import "./SearchResults.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
 import norwichMainImg from "../../images/norwich-main.jpg";
 
 import StompCards from "../../components/StompCards/StompCards";
+import { API_URL } from "../../api";
 // import { beachdata } from "../../beachdata";
 // import EventStomps from "../../components/EventStomps/EventStomps";
 // import { eventsdata } from "../../eventsdata";
@@ -26,7 +26,7 @@ export default function SearchResults() {
   }, []);
 
   const getStomps = async () => {
-    const API = `http://localhost:8080/stomps/tags/${tag}`;
+    const API = `${API_URL}/stomps/tags/${tag}`;
     const res = await axios.get(API);
     console.log(res.data);
     setStomps(res.data);
