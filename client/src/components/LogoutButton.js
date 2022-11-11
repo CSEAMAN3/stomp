@@ -5,7 +5,7 @@ import "./LoginButton.css";
 const LogoutButton = () => {
   const { user, logout } = useAuth0();
 
-  if (user) {
+  if (!user) {
     return (
       <span className="header-list-item" onClick={() => logout({ returnTo: window.location.origin })}>
         Member Logout
