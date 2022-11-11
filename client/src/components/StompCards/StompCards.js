@@ -19,7 +19,7 @@ export default function StompCards({ stomps, filterAttr, filterValue }) {
         .map((card, idx) => {
           const { _id, cardImg, title, seafront, parking, restaurant, bars, location, bookNow } = card;
           return (
-            <Link to={`/stompdetails/${_id}`}>
+            <Link className="stompcard-link" to={`/stompdetails/${_id}`}>
               <div className="beach-stomps-card" key={idx}>
                 {bookNow && (
                   <div className="badge-container">

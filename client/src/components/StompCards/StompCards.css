@@ -24,6 +24,10 @@ Images
 Buttons / Links
 **************/
 
+.stompcard-link {
+  color: var(--grn);
+}
+
 /*************
 Typography
 **************/
