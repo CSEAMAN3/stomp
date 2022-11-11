@@ -28,8 +28,8 @@ export default function Header() {
             <Link to="/contact">
               <li className="header-list-item">Contact</li>
             </Link>
-            {user && <LoginButton />}
-            {!user && <LogoutButton />}
+            {!user && <LoginButton />}
+            {user && <LogoutButton />}
           </ul>
         </nav>
       </div>
