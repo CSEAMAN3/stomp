@@ -6,10 +6,14 @@ const LogoutButton = () => {
   const { user, logout } = useAuth0();
 
   if (user) {
-    return <button onClick={() => logout({ returnTo: window.location.origin })}>Log Out</button>;
+    return (
+      <span className="header-list-item" onClick={() => logout({ returnTo: window.location.origin })}>
+        Member Logout
+      </span>
+    );
   } else {
     return (
-      <a className="menu-item memberLogin" href="/memberprofile">
+      <a className="menu-item memberLogin" href="/">
         <li className="header-list-item">Member Logout</li>
       </a>
     );
@@ -17,3 +21,5 @@ const LogoutButton = () => {
 };
 
 export default LogoutButton;
+
+// <button onClick={() => logout({ returnTo: window.location.origin })}>Log Out</button>;

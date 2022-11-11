@@ -8,7 +8,7 @@ const LoginButton = () => {
   if (!user) {
     return (
       <span className="header-list-item" onClick={() => loginWithRedirect()}>
-        Members Login
+        Member Login
       </span>
     );
   } else {
