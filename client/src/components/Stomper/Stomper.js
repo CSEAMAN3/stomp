@@ -20,8 +20,9 @@ export default function Stomper() {
             <div className="city-content-container">
               <h4 className="stomper-type-heading">City Stomper</h4>
               <p className="stomper-text">
-                Lorem ipsum dolor sit amet consec tetur adipisi cing elit. Ex incidunt ipsam debitis. Nihil quas dolorib us
-                tempora placeat! Labo rio sam, blandit iis quaerat.
+                Stompers unite and create the heartbeat of your local community. Unearth a cities beuatiful history, visit
+                places of interest or simply find the perfect seat to sit and people watch. Make the most of city stomping
+                with stomp.
               </p>
             </div>
           </div>
@@ -32,8 +33,8 @@ export default function Stomper() {
             <div className="city-content-container">
               <h4 className="stomper-type-heading">Nature Stomper</h4>
               <p className="stomper-text">
-                Lorem ipsum dolor sit amet consec tetur adipisi cing elit. Ex incidunt ipsam debitis. Nihil quas dolorib us
-                tempora placeat! Labo rio sam, blandit iis quaerat.
+                Fill your lungs with stomping goodness and take in everything the world has to offer. Nature stompers will
+                love discovering new places of natural beauty. Get your walking boots on and go stomp.
               </p>
             </div>
           </div>
@@ -44,8 +45,9 @@ export default function Stomper() {
             <div className="city-content-container">
               <h4 className="stomper-type-heading">Beach Stomper</h4>
               <p className="stomper-text">
-                Lorem ipsum dolor sit amet consec tetur adipisi cing elit. Ex incidunt ipsam debitis. Nihil quas dolorib us
-                tempora placeat! Labo rio sam, blandit iis quaerat.
+                Grab your bucket and spade and get ready for an adventure. Beaches are great for exploring, whether your a
+                solo stomper, taking the dog for a walk or running riot with the whole family, you'll find the perfect
+                beaches to stomp near you.
               </p>
             </div>
           </div>
@@ -56,8 +58,9 @@ export default function Stomper() {
             <div className="event-content-container">
               <h4 className="stomper-type-heading">Event Stomper</h4>
               <p className="stomper-text">
-                Lorem ipsum dolor sit amet consec tetur adipisi cing elit. Ex incidunt ipsam debitis. Nihil quas dolorib us
-                tempora placeat! Labo rio sam, blandit iis quaerat.
+                We will, we will stomp you! If you can't find an event you're intested in we'll eat our stomping boots. Here
+                on stomp there's an event for everyone, from stomping at gigs to stomping on Tim Smith we gaurantee you'll
+                get sore feet.
               </p>
             </div>
           </div>
