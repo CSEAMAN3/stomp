@@ -6,7 +6,6 @@ import axios from "axios";
 
 import StompCards from "../../components/StompCards/StompCards";
 import { useEffect } from "react";
-import { text } from "@fortawesome/fontawesome-svg-core";
 import BeachForm from "../../components/Forms/BeachForm";
 import CityForm from "../../components/Forms/CityForm";
 import EventForm from "../../components/Forms/EventForm";

@@ -1,18 +1,21 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 import Burger from "../Burger/Burger";
 import logo from "../../images/stomplogo.svg";
 import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
 
 export default function Header() {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
   return (
     <header className="header">
       <div className="header-container">
         <div className="logo-container">
           <Link to="/">
-            {/* <h1 className="header-logo">Stomp</h1> */}
             <img className="logo" src={logo} alt="stomp logo" />
           </Link>
         </div>
@@ -25,7 +28,8 @@ export default function Header() {
             <Link to="/contact">
               <li className="header-list-item">Contact</li>
             </Link>
-            <LoginButton />
+            {user && <LoginButton />}
+            {!user && <LogoutButton />}
           </ul>
         </nav>
       </div>
