@@ -42,8 +42,13 @@ export default function SearchResults() {
           <div className="sr-content-container">
             <h1 className="searchResults-heading">{tag}</h1>
             <p className="sr-content">
-              Lorem ipsum dolor sit amet consect etur adipisi cing elit. Ducimus vero eveniet sequi aliquid sunt autem quidem
-              earum suscip it magnam neque cumque, tempore, quae delectus explica bo officia.
+              Norwich is a vibrant, yet safe city in the heart of the picturesque Norfolk countryside in the region of East
+              Anglia. Norwich is within easy reach of London, Cambridge and the Norfolk coast.
+            </p>
+            <br />
+            <p className="sr-content sr-content-wide">
+              Its thriving medieval centre, rich in beautiful historic architecture, is a perfect blend between the past and
+              the present.
             </p>
           </div>
         </div>

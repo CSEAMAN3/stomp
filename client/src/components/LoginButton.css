@@ -1,14 +1,15 @@
-a {
+.header-list-item {
   font-weight: 700;
+  cursor: pointer;
 }
 
-.memberLogin {
+.header-list-item {
   display: inline-block;
   padding: 1rem 0;
 }
 
 @media (min-width: 800px) {
-  .memberLogin {
+  .header-list-item {
     padding: 0;
   }
 }
