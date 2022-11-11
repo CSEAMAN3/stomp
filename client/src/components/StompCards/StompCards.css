@@ -31,7 +31,7 @@ Typography
 .beach-title {
   text-transform: capitalize;
   font-weight: 700;
-  color: var(--grn);
+  color: var(--grn) !important;
 }
 
 .seafront-text {
