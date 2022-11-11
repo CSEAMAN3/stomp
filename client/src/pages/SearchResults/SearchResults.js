@@ -5,15 +5,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import norwichMainImg from "../../images/norwich-main.jpg";
 
+import Join from "../../components/Join/Join";
 import StompCards from "../../components/StompCards/StompCards";
 import { API_URL } from "../../api";
-// import { beachdata } from "../../beachdata";
-// import EventStomps from "../../components/EventStomps/EventStomps";
-// import { eventsdata } from "../../eventsdata";
-// import NatureStomps from "../../components/NatureStomps/NatureStomps";
-// import { naturedata } from "../../naturedata";
-// import CityStomps from "../../components/CityStomps/CityStomps";
-// import { citydata } from "../../citydata";
 
 export default function SearchResults() {
   const { tag } = useParams();
@@ -85,6 +79,7 @@ export default function SearchResults() {
           <StompCards stomps={stomps} filterAttr="type" filterValue="city" />
         </div>
       </section>
+      <Join />
     </>
   );
 }
