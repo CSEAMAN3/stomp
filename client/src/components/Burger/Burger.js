@@ -3,6 +3,7 @@ import "./Burger.css";
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
 
 export default function Burger() {
   return (
@@ -17,6 +18,7 @@ export default function Burger() {
         Contact
       </a>
       <LoginButton />
+      <LogoutButton />
     </Menu>
   );
 }
